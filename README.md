@@ -4,6 +4,7 @@ Creates junctions/symlinks to all directory/file from an input directory to an o
 Let's say you have lot of movies on multiple drives, and you want to have them in one single directory.
 In my simple test case, i have movies in these two distinct directory:
 
+```
 C:\Users\zotya>dir "E:\MOVIES"
  Volume in drive E is WD 1TB
  Volume Serial Number is 7EAD-81D0
@@ -20,7 +21,9 @@ C:\Users\zotya>dir "E:\MOVIES"
 2017-04-30  06:21    <DIR>          The Shawshank Redemption
                1 File(s)              0 bytes
                7 Dir(s)  111,084,064,768 bytes free
-               
+```
+
+```
 C:\Users\zotya>dir "F:\MOVIES"
  Volume in drive F is WD 3TB
  Volume Serial Number is 7EF1-D3D5
@@ -37,9 +40,11 @@ C:\Users\zotya>dir "F:\MOVIES"
 2017-04-30  06:26    <DIR>          The Lord of the Rings The Return of the King
                1 File(s)              0 bytes
                7 Dir(s)  2,092,018,057,216 bytes free
+```
                
-After running the program, i have acces to the contents of E:\MOVIES in F:MOVIES:
+After running the program, i have acces to the contents of E:\MOVIES in F:\MOVIES:
 
+```
 C:\Users\zotya>dir "F:\MOVIES"
  Volume in drive F is WD 3TB
  Volume Serial Number is 7EF1-D3D5
@@ -62,6 +67,6 @@ C:\Users\zotya>dir "F:\MOVIES"
 2017-04-30  06:44    <JUNCTION>     The Shawshank Redemption [E:\MOVIES\The Shawshank Redemption]
                2 File(s)              0 bytes
               12 Dir(s)  2,092,018,057,216 bytes free
-              
-One can create junctions and symlinks on windows in cmd with mklink command, but that's pretty a pain in the ass for
-multiple directories and files, so i created this little c# program to automate this procedure.
+```
+
+When you rerun the program, it simply recreates the junctions/symlinks.
