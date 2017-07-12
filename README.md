@@ -1,5 +1,5 @@
 # Junction-creator
-Creates junctions/symlinks to all directory/file from an input directory to an output directory
+Creates junctions/symlinks to all directory/file from an input directory to an output directory.
 
 Let's say you have lot of movies on multiple drives, and you want to have them in one single directory.
 In my simple test case, i have movies in these two distinct directory:
